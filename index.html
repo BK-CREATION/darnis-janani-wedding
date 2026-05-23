@@ -2289,23 +2289,102 @@ padding:30px 20px !important;
 }
 
 /* TIMELINE */
+/* =========================================================
+TIMELINE MOBILE FIX
+========================================================= */
+
+@media(max-width:768px){
+
+.timeline{
+
+padding-left:10px;
+
+margin-top:20px;
+}
+
+/* LINE */
 
 .timeline::before{
-left:10px !important;
+
+left:18px;
+
+width:2px;
+
+background:#d8b89a;
 }
 
+/* DOT */
+
 .timeline-dot{
-left:10px !important;
+
+left:18px;
+
+width:16px;
+height:16px;
 }
+
+/* ITEM */
+
+.timeline-item{
+
+margin-bottom:40px;
+
+padding-left:45px;
+}
+
+/* CARD */
 
 .timeline-card{
 
 width:100% !important;
 
-margin-left:35px !important;
-padding:25px 18px !important;
+margin-left:0 !important;
+
+padding:25px 20px;
+
+border-radius:25px;
+
+position:relative;
+
+box-sizing:border-box;
 }
 
+/* REMOVE ALTERNATING EFFECT */
+
+.timeline-item:nth-child(odd) .timeline-card{
+margin-left:0 !important;
+}
+
+/* TEXT */
+
+.timeline-card h3{
+
+font-size:1.7rem;
+
+margin-bottom:15px;
+}
+
+.timeline-card p{
+
+font-size:0.92rem;
+
+line-height:1.8;
+}
+
+/* BUTTON */
+
+.timeline-btn{
+
+width:100%;
+
+text-align:center;
+
+padding:14px 20px;
+
+margin-top:20px;
+}
+
+}
 /* GALLERY */
 
 .gallery{
@@ -2399,26 +2478,8 @@ that help your brand stand out online ✨
 
 </p>
 
-<div class="popup-services">
-
-<div class="popup-service">
-✔ Modern Premium UI
-</div>
-
-<div class="popup-service">
-✔ Mobile Responsive
-</div>
 
 
-<div class="popup-service">
-✔ Custom Web Design
-</div>
-
-<div class="popup-service">
-✔ Business & Portfolio Websites
-</div>
-
-</div>
 <h3>
 Contact now!
 </h3>
