@@ -1,0 +1,2854 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- =========================================================
+OPENING LOADER
+========================================================= -->
+
+<div class="site-loader" id="siteLoader">
+
+<div class="loader-content">
+
+<h1>
+D & J
+</h1>
+
+<p>
+Wedding Invitation
+</p>
+
+<div class="loader-line"></div>
+
+<span>
+Loading Love Story...
+</span>
+
+</div>
+
+</div>
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Darnis & Janani | Wedding Invitation</title>
+
+<!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+RESET
+========================================================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+background:#fdf7f2;
+color:#2d2321;
+}
+
+/* =========================================================
+CURSOR GLOW
+========================================================= */
+
+.cursor-glow{
+position:fixed;
+width:300px;
+height:300px;
+
+background:radial-gradient(circle,
+rgba(255,220,200,0.25),
+transparent 70%);
+
+border-radius:50%;
+pointer-events:none;
+z-index:0;
+transform:translate(-50%,-50%);
+}
+
+/* =========================================================
+FLOATING HEARTS
+========================================================= */
+
+.hearts{
+position:fixed;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+z-index:1;
+}
+
+.heart{
+position:absolute;
+color:#f6bdbd;
+opacity:0.35;
+animation:floatUp linear infinite;
+}
+
+@keyframes floatUp{
+
+from{
+transform:translateY(100vh) scale(0.5);
+}
+
+to{
+transform:translateY(-120vh) scale(1.2);
+}
+
+}
+/* =========================================================
+FLOATING CTA
+========================================================= */
+
+.floating-cta{
+
+position:fixed;
+
+left:25px;
+bottom:25px;
+
+padding:10px 24px;
+
+border-radius:50px;
+
+background:
+linear-gradient(
+135deg,
+#25D366,
+#128C7E);
+
+color:white;
+
+text-decoration:none;
+
+font-size:0.95rem;
+
+font-weight:600;
+
+box-shadow:
+0 15px 35px rgba(37,211,102,0.3);
+
+z-index:9999;
+
+animation:pulseCTA 2s infinite;
+}
+
+@keyframes pulseCTA{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.04);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+@media(max-width:768px){
+
+.floating-cta{
+
+left:15px;
+right:15px;
+bottom:15px;
+
+text-align:center;
+}
+
+}
+
+/* =========================================================
+NAVBAR
+========================================================= */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:25px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+transition:0.4s;
+}
+
+.navbar.scrolled{
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(20px);
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.logo{
+font-size:2rem;
+font-weight:700;
+font-family:'Cormorant Garamond',serif;
+color:#8a5d3b;
+}
+
+.nav-links{
+display:flex;
+gap:40px;
+align-items:center;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#3b2d2a;
+font-weight:500;
+position:relative;
+}
+
+.nav-links a::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-5px;
+width:0%;
+height:1px;
+background:#c89a6f;
+transition:0.4s;
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+/* FIX MOBILE NAVBAR */
+
+.nav-links{
+
+z-index:9999;
+}
+
+.menu-btn{
+
+z-index:10000;
+position:relative;
+}
+
+/* =========================================================
+SITE LOADER
+========================================================= */
+
+.site-loader{
+
+position:fixed;
+
+inset:0;
+
+background:#fdf7f2;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+z-index:999999;
+
+transition:1s ease;
+}
+
+.loader-content{
+text-align:center;
+}
+
+.loader-content h1{
+
+font-size:6rem;
+
+font-family:'Cormorant Garamond',serif;
+
+color:#8a5d3b;
+
+margin-bottom:10px;
+}
+
+.loader-content p{
+
+letter-spacing:4px;
+
+color:#b28763;
+
+margin-bottom:30px;
+}
+
+.loader-content span{
+
+color:#7a6a65;
+
+font-size:0.95rem;
+}
+
+.loader-line{
+
+width:200px;
+height:2px;
+
+background:#e4c8ac;
+
+margin:25px auto;
+
+overflow:hidden;
+
+position:relative;
+}
+
+.loader-line::before{
+
+content:'';
+
+position:absolute;
+
+left:-100%;
+top:0;
+
+width:100%;
+height:100%;
+
+background:#c89a6f;
+
+animation:loadingLine 2s linear infinite;
+}
+
+@keyframes loadingLine{
+
+from{
+left:-100%;
+}
+
+to{
+left:100%;
+}
+
+}
+/* =========================================================
+LANGUAGE SWITCH
+========================================================= */
+
+.language-switch{
+display:flex;
+gap:10px;
+}
+
+.language-switch button{
+
+padding:10px 18px;
+
+border:none;
+
+border-radius:30px;
+
+background:rgba(255,255,255,0.3);
+
+backdrop-filter:blur(10px);
+
+color:#8a5d3b;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:0.3s;
+}
+
+.language-switch button:hover{
+
+background:#c89a6f;
+
+color:white;
+}
+
+.menu-btn{
+display:none;
+font-size:2rem;
+cursor:pointer;
+color:#8a5d3b;
+}
+
+/* =========================================================
+HERO SECTION
+========================================================= */
+
+.hero{
+min-height:100vh;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:70px;
+padding:120px 8%;
+position:relative;
+overflow:hidden;
+}
+
+.hero-overlay{
+position:absolute;
+inset:0;
+
+background:
+radial-gradient(circle at top left,
+rgba(245,208,169,0.28),
+transparent 40%),
+
+radial-gradient(circle at bottom right,
+rgba(255,220,200,0.18),
+transparent 40%);
+
+z-index:1;
+}
+
+/* FLOATING RINGS */
+
+.floating-ring{
+position:absolute;
+border:1px solid rgba(200,154,111,0.15);
+border-radius:50%;
+animation:rotateRing 25s linear infinite;
+}
+
+.ring-1{
+width:450px;
+height:450px;
+top:-180px;
+right:-180px;
+}
+
+.ring-2{
+width:300px;
+height:300px;
+bottom:-100px;
+left:-100px;
+animation-direction:reverse;
+}
+
+@keyframes rotateRing{
+
+from{
+transform:rotate(0deg);
+}
+
+to{
+transform:rotate(360deg);
+}
+
+}
+
+/* =========================================================
+LEFT SIDE
+========================================================= */
+
+.hero-left{
+position:relative;
+z-index:5;
+animation:fadeLeft 1.3s ease;
+}
+
+.hero-badge{
+display:inline-block;
+padding:12px 24px;
+border-radius:50px;
+background:white;
+color:#b28763;
+font-size:0.9rem;
+font-weight:600;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+margin-bottom:35px;
+}
+
+.hero-title{
+font-size:clamp(5rem,9vw,8rem);
+line-height:0.92;
+font-family:'Cormorant Garamond',serif;
+color:#2d2321;
+margin-bottom:35px;
+}
+
+.hero-title span{
+color:#c89a6f;
+}
+
+.hero-description{
+max-width:560px;
+font-size:1.08rem;
+line-height:2;
+color:#6d5c58;
+margin-bottom:55px;
+}
+
+/* =========================================================
+COUNTDOWN
+========================================================= */
+
+.premium-countdown{
+display:flex;
+gap:22px;
+flex-wrap:wrap;
+margin-bottom:55px;
+}
+
+.count-card{
+width:115px;
+height:115px;
+border-radius:32px;
+background:rgba(255,255,255,0.55);
+backdrop-filter:blur(20px);
+border:1px solid rgba(200,154,111,0.18);
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.06),
+inset 0 1px 1px rgba(255,255,255,0.6);
+
+transition:0.4s;
+}
+
+.count-card:hover{
+transform:translateY(-8px);
+}
+
+.count-card h2{
+font-size:2.7rem;
+color:#8a5d3b;
+font-family:'Cormorant Garamond',serif;
+}
+
+.count-card span{
+color:#9a7d6a;
+letter-spacing:1px;
+font-size:0.85rem;
+}
+
+/* =========================================================
+BUTTONS
+========================================================= */
+
+.hero-buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.hero-btn{
+padding:18px 40px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:0.4s;
+}
+
+.primary-btn{
+background:linear-gradient(
+135deg,
+#c89a6f,
+#f5d0a9);
+
+color:#2d2321;
+
+box-shadow:
+0 12px 30px rgba(200,154,111,0.25);
+}
+
+.secondary-btn{
+background:white;
+color:#8a5d3b;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+
+.hero-btn:hover{
+transform:translateY(-5px);
+}
+
+/* =========================================================
+RIGHT SIDE
+========================================================= */
+
+.hero-right{
+position:relative;
+z-index:5;
+display:flex;
+justify-content:center;
+animation:fadeRight 1.3s ease;
+}
+
+.image-wrapper{
+position:relative;
+width:520px;
+max-width:100%;
+}
+
+.main-hero-image{
+width:100%;
+height:760px;
+object-fit:cover;
+border-radius:45px;
+position:relative;
+z-index:3;
+
+box-shadow:
+0 25px 60px rgba(0,0,0,0.18);
+}
+
+/* FLOATING DATE CARD */
+
+.floating-date-card{
+position:absolute;
+top:40px;
+left:-40px;
+
+width:150px;
+padding:28px;
+
+border-radius:35px;
+
+background:rgba(255,255,255,0.88);
+
+backdrop-filter:blur(20px);
+
+text-align:center;
+
+z-index:10;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,0.08);
+}
+
+.mini-text{
+font-size:0.7rem;
+letter-spacing:2px;
+color:#b28763;
+}
+
+.floating-date-card h3{
+font-size:4.2rem;
+line-height:1;
+margin:12px 0;
+color:#8a5d3b;
+font-family:'Cormorant Garamond',serif;
+}
+
+/* QUOTE */
+
+.floating-quote-card{
+position:absolute;
+bottom:40px;
+right:-40px;
+
+width:270px;
+padding:28px;
+
+border-radius:28px;
+
+background:rgba(255,255,255,0.18);
+
+backdrop-filter:blur(20px);
+
+color:white;
+line-height:1.9;
+
+z-index:10;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,0.12);
+}
+/* =========================================================
+TAMIL TRADITIONAL ELEMENTS
+========================================================= */
+
+.kolam{
+
+position:absolute;
+
+width:220px;
+height:220px;
+
+background-image:url('https://www.transparenttextures.com/patterns/arabesque.png');
+
+opacity:0.08;
+
+z-index:1;
+}
+
+.kolam-left{
+
+left:-60px;
+bottom:60px;
+}
+
+.kolam-right{
+
+right:-60px;
+top:120px;
+}
+
+.hero::before{
+
+content:'🌸';
+
+position:absolute;
+
+top:100px;
+left:80px;
+
+font-size:2rem;
+
+opacity:0.5;
+
+animation:floatFlower 5s ease-in-out infinite;
+}
+
+.hero::after{
+
+content:'🪔';
+
+position:absolute;
+
+bottom:100px;
+right:100px;
+
+font-size:2rem;
+
+opacity:0.5;
+
+animation:floatFlower 5s ease-in-out infinite reverse;
+}
+
+@keyframes floatFlower{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+/* =========================================================
+SECTIONS
+========================================================= */
+
+.section{
+padding:120px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:4rem;
+color:#8a5d3b;
+margin-bottom:80px;
+font-family:'Cormorant Garamond',serif;
+}
+
+/* SCROLL ANIMATION */
+
+.fade-up{
+opacity:0;
+transform:translateY(50px);
+transition:1s ease;
+}
+
+.fade-up.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* =========================================================
+COUPLE SECTION
+========================================================= */
+
+.couple-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:60px;
+}
+
+.couple-card{
+background:white;
+border-radius:40px;
+overflow:hidden;
+transition:0.5s;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.couple-card:hover{
+transform:translateY(-10px);
+}
+
+.couple-card img{
+width:100%;
+height:550px;
+object-fit:cover;
+}
+
+.card-content{
+padding:40px;
+text-align:center;
+}
+
+.card-content h2{
+font-size:2.5rem;
+color:#8a5d3b;
+margin-bottom:15px;
+font-family:'Cormorant Garamond',serif;
+}
+
+.card-content p{
+color:#6d5c58;
+line-height:1.8;
+}
+
+/* =========================================================
+LOCATION SECTION
+========================================================= */
+
+.location-wrapper{
+display:flex;
+justify-content:center;
+}
+
+.location-card{
+width:100%;
+max-width:1200px;
+background:white;
+border-radius:40px;
+overflow:hidden;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+
+box-shadow:0 10px 40px rgba(0,0,0,0.08);
+}
+
+.location-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.location-content{
+padding:60px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.location-content h3{
+font-size:3rem;
+color:#8a5d3b;
+margin-bottom:20px;
+font-family:'Cormorant Garamond',serif;
+}
+
+.venue-address{
+font-size:1.1rem;
+color:#b28763;
+margin-bottom:20px;
+font-weight:600;
+}
+
+.venue-description{
+line-height:1.9;
+color:#6d5c58;
+margin-bottom:40px;
+}
+
+.location-btn{
+display:inline-block;
+width:fit-content;
+padding:18px 40px;
+border-radius:50px;
+
+background:linear-gradient(
+135deg,
+#c89a6f,
+#f5d0a9);
+
+color:#2d2321;
+
+text-decoration:none;
+font-weight:600;
+transition:0.4s;
+}
+
+.location-btn:hover{
+transform:translateY(-5px);
+}
+
+/* =========================================================
+GALLERY
+========================================================= */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.gallery img{
+width:100%;
+aspect-ratio:3/4;
+object-fit:cover;
+border-radius:30px;
+transition:0.5s;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+.footer{
+background:#2d2321;
+color:white;
+text-align:center;
+padding:100px 8%;
+}
+
+.footer h2{
+font-size:4rem;
+color:#f5d0a9;
+margin-bottom:20px;
+font-family:'Cormorant Garamond',serif;
+}
+
+/* =========================================================
+PREMIUM FOOTER BRANDING
+========================================================= */
+
+.footer-divider{
+
+width:120px;
+height:1px;
+
+background:rgba(255,255,255,0.25);
+
+margin:35px auto;
+}
+
+.footer-love{
+
+font-size:1rem;
+
+color:rgba(255,255,255,0.7);
+
+margin-bottom:18px;
+
+letter-spacing:1px;
+}
+
+.footer-brand{
+
+font-size:1rem;
+
+color:rgba(255,255,255,0.8);
+}
+
+.footer-brand span{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:1.8rem;
+
+color:#f5d0a9;
+
+margin-left:10px;
+
+letter-spacing:2px;
+}
+
+/* =========================================================
+CREATOR SOCIAL LINKS
+========================================================= */
+
+.creator-socials{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+margin-top:35px;
+
+flex-wrap:wrap;
+}
+
+.creator-btn{
+
+padding:14px 28px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:0.4s;
+
+backdrop-filter:blur(10px);
+}
+
+.insta-btn{
+
+background:linear-gradient(
+135deg,
+#833ab4,
+#fd1d1d,
+#fcb045);
+
+color:white;
+
+box-shadow:
+0 10px 30px rgba(253,29,29,0.25);
+}
+
+.whatsapp-btn{
+
+background:#25D366;
+
+color:white;
+
+box-shadow:
+0 10px 30px rgba(37,211,102,0.25);
+}
+
+.creator-btn:hover{
+
+transform:translateY(-5px) scale(1.05);
+}
+
+/* =========================================================
+MUSIC PLAYER
+========================================================= */
+
+.music-player{
+
+position:fixed;
+
+bottom:30px;
+right:30px;
+
+width:65px;
+height:65px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,0.2);
+
+backdrop-filter:blur(20px);
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+font-size:1.5rem;
+
+cursor:pointer;
+
+z-index:999;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+/* =========================================================
+INVITATION SECTION
+========================================================= */
+
+.invitation-container{
+
+max-width:900px;
+
+margin:auto;
+
+text-align:center;
+
+padding:80px;
+
+background:white;
+
+border-radius:40px;
+
+box-shadow:0 10px 40px rgba(0,0,0,0.06);
+}
+
+.invitation-icon{
+
+font-size:3rem;
+
+display:block;
+
+margin-bottom:20px;
+
+color:#c89a6f;
+}
+
+.invite-subtitle{
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+color:#b28763;
+}
+
+.invite-heading{
+
+font-size:2.5rem;
+
+margin:20px 0;
+
+font-family:'Cormorant Garamond',serif;
+}
+
+.couple-name{
+
+font-size:5rem;
+
+margin-bottom:20px;
+
+font-family:'Cormorant Garamond',serif;
+
+color:#8a5d3b;
+}
+
+.invite-description{
+
+font-size:1.1rem;
+
+line-height:2;
+
+color:#6d5c58;
+}
+
+/* =========================================================
+FAMILY SECTION
+========================================================= */
+
+.family-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:40px;
+}
+
+.family-card{
+
+padding:50px;
+
+border-radius:35px;
+
+background:white;
+
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+
+.family-card h3{
+
+font-size:2.5rem;
+
+margin-bottom:20px;
+
+font-family:'Cormorant Garamond',serif;
+
+color:#8a5d3b;
+}
+
+.family-card p{
+
+line-height:2;
+
+color:#6d5c58;
+}
+
+/* =========================================================
+STORY SECTION
+========================================================= */
+
+.story-container{
+
+max-width:900px;
+
+margin:auto;
+
+text-align:center;
+}
+
+.story-text{
+
+font-size:1.2rem;
+
+line-height:2.2;
+
+color:#6d5c58;
+}
+
+/* =========================================================
+TIMELINE
+========================================================= */
+
+.timeline{
+
+max-width:900px;
+
+margin:auto;
+
+position:relative;
+}
+
+.timeline::before{
+
+content:'';
+
+position:absolute;
+
+left:50%;
+
+top:0;
+
+width:2px;
+
+height:100%;
+
+background:#e4c8ac;
+}
+
+.timeline-item{
+
+position:relative;
+
+margin-bottom:80px;
+}
+
+.timeline-dot{
+
+position:absolute;
+
+left:50%;
+
+top:20px;
+
+width:20px;
+height:20px;
+
+background:#c89a6f;
+
+border-radius:50%;
+
+transform:translateX(-50%);
+}
+
+.timeline-card{
+
+width:42%;
+
+padding:40px;
+
+background:white;
+
+border-radius:30px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
+
+.timeline-item:nth-child(odd) .timeline-card{
+margin-left:auto;
+}
+
+.timeline-card h3{
+
+font-size:2rem;
+
+margin-bottom:20px;
+
+font-family:'Cormorant Garamond',serif;
+
+color:#8a5d3b;
+}
+
+.timeline-btn{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:14px 28px;
+
+border-radius:30px;
+
+background:#c89a6f;
+
+color:white;
+
+text-decoration:none;
+}
+
+/* =========================================================
+BLESSING WALL
+========================================================= */
+
+.blessing-container{
+
+max-width:700px;
+
+margin:auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+}
+
+.blessing-input,
+.blessing-textarea{
+
+padding:20px;
+
+border:none;
+
+border-radius:25px;
+
+background:white;
+
+font-size:1rem;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.blessing-textarea{
+
+height:180px;
+
+resize:none;
+}
+
+.blessing-btn{
+
+padding:18px;
+
+border:none;
+
+border-radius:30px;
+
+background:#c89a6f;
+
+color:white;
+
+cursor:pointer;
+}
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media(max-width:992px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero-left{
+order:2;
+}
+
+.hero-right{
+order:1;
+}
+
+.hero-description{
+margin:auto auto 55px;
+}
+
+.premium-countdown{
+justify-content:center;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
+.location-card{
+grid-template-columns:1fr;
+}
+
+.main-hero-image{
+height:520px;
+}
+
+}
+
+@media(max-width:768px){
+
+.menu-btn{
+display:block;
+}
+.timeline::before{
+left:20px;
+}
+
+.timeline-dot{
+left:20px;
+}
+
+.timeline-card{
+width:100%;
+margin-left:50px !important;
+}
+
+.couple-name{
+font-size:3rem;
+}
+.nav-links{
+position:fixed;
+top:0;
+right:-100%;
+width:250px;
+height:100vh;
+
+background:rgba(255,255,255,0.95);
+
+backdrop-filter:blur(20px);
+
+flex-direction:column;
+
+justify-content:center;
+align-items:center;
+
+transition:0.5s;
+}
+
+.nav-links.active{
+right:0;
+}
+
+.hero-title{
+font-size:4rem;
+}
+
+.main-hero-image{
+height:430px;
+}
+
+.section-title{
+font-size:3rem;
+}
+
+}
+/* =========================================================
+BK CREATIONS POPUP
+========================================================= */
+
+.bk-popup-overlay{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,0.55);
+
+backdrop-filter:blur(8px);
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+padding:20px;
+
+z-index:99999;
+
+animation:popupFade 0.6s ease;
+}
+
+@keyframes popupFade{
+
+from{
+opacity:0;
+}
+
+to{
+opacity:1;
+}
+
+}
+
+.bk-popup-card{
+
+position:relative;
+
+max-width:700px;
+
+width:100%;
+
+padding:60px 45px;
+
+border-radius:40px;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,0.95),
+rgba(255,255,255,0.82));
+
+backdrop-filter:blur(20px);
+
+text-align:center;
+
+overflow:hidden;
+
+box-shadow:
+0 25px 70px rgba(0,0,0,0.2);
+
+animation:popupScale 0.6s ease;
+}
+
+@keyframes popupScale{
+
+from{
+transform:scale(0.8);
+opacity:0;
+}
+
+to{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+/* DECORATION */
+
+.bk-popup-card::before{
+
+content:'';
+
+position:absolute;
+
+width:300px;
+height:300px;
+
+background:rgba(245,208,169,0.25);
+
+border-radius:50%;
+
+top:-120px;
+right:-120px;
+}
+
+.popup-tag{
+
+display:inline-block;
+
+padding:12px 24px;
+
+border-radius:50px;
+
+background:#c89a6f;
+
+color:white;
+
+font-size:0.85rem;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:25px;
+
+position:relative;
+
+z-index:2;
+}
+
+.bk-popup-card h2{
+
+font-size:3.5rem;
+
+font-family:'Cormorant Garamond',serif;
+
+color:#8a5d3b;
+
+margin-bottom:25px;
+
+position:relative;
+
+z-index:2;
+}
+
+.bk-popup-card p{
+
+font-size:1.05rem;
+
+line-height:2;
+
+color:#6d5c58;
+
+margin-bottom:40px;
+
+position:relative;
+
+z-index:2;
+}
+
+/* SERVICES */
+
+.popup-services{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:18px;
+
+margin-bottom:40px;
+
+position:relative;
+
+z-index:2;
+}
+
+.popup-service{
+
+padding:18px;
+
+border-radius:22px;
+
+background:white;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,0.05);
+
+font-size:0.95rem;
+
+font-weight:500;
+
+color:#8a5d3b;
+}
+
+/* BUTTONS */
+
+.popup-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+position:relative;
+
+z-index:2;
+}
+
+.popup-btn{
+
+padding:16px 34px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:0.4s;
+}
+
+.insta-popup-btn{
+
+background:linear-gradient(
+135deg,
+#833ab4,
+#fd1d1d,
+#fcb045);
+
+color:white;
+
+box-shadow:
+0 10px 30px rgba(253,29,29,0.25);
+}
+
+.whatsapp-popup-btn{
+
+background:#25D366;
+
+color:white;
+
+box-shadow:
+0 10px 30px rgba(37,211,102,0.25);
+}
+
+.popup-btn:hover{
+
+transform:translateY(-5px) scale(1.04);
+}
+
+/* CLOSE BUTTON */
+
+.close-popup{
+
+position:absolute;
+
+top:20px;
+right:20px;
+
+width:42px;
+height:42px;
+
+border:none;
+
+border-radius:50%;
+
+background:white;
+
+font-size:1.5rem;
+
+cursor:pointer;
+
+color:#8a5d3b;
+
+box-shadow:
+0 10px 20px rgba(0,0,0,0.08);
+
+z-index:5;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.bk-popup-card{
+
+padding:45px 25px;
+}
+
+.bk-popup-card h2{
+
+font-size:2.4rem;
+}
+
+}
+/* =========================================================
+POPUP HIDE ANIMATION
+========================================================= */
+
+.hide-popup{
+
+animation:popupHide 0.1s ease forwards;
+}
+
+@keyframes popupHide{
+
+from{
+opacity:1;
+transform:scale(1);
+}
+
+to{
+opacity:0;
+transform:scale(0.85);
+}
+
+}
+</style>
+
+</head>
+<!-- =========================================================
+BK CREATIONS POPUP
+ADD THIS ABOVE </body>
+========================================================= -->
+
+<div class="bk-popup-overlay" id="bkPopup">
+<div class="bk-popup-card">
+<button class="close-popup" id="closePopup">
+×
+</button>
+
+<span class="popup-tag">
+BK CREATIONS
+</span>
+
+<h2>
+Need a Stunning Website?
+</h2>
+
+<p>
+
+We create modern and premium websites
+for businesses, portfolios, startups,
+and personal brands with elegant UI,
+smooth animations, responsive design,
+and high-performance experiences
+that help your brand stand out online ✨
+
+</p>
+
+<div class="popup-services">
+
+<div class="popup-service">
+✔ Modern Premium UI
+</div>
+
+<div class="popup-service">
+✔ Mobile Responsive
+</div>
+
+
+<div class="popup-service">
+✔ Custom Web Design
+</div>
+
+<div class="popup-service">
+✔ Business & Portfolio Websites
+</div>
+
+</div>
+<h3>
+Contact now!
+</h3>
+
+<div class="popup-buttons">
+
+<a
+href="https://instagram.com/bk__.creations"
+target="_blank"
+class="popup-btn insta-popup-btn">
+
+Instagram
+
+</a>
+
+<a
+href="https://wa.me/919159954311"
+target="_blank"
+class="popup-btn whatsapp-popup-btn">
+
+WhatsApp
+
+</a>
+
+</div>
+
+
+
+</div>
+
+</div>
+<body>
+
+<div class="cursor-glow"></div>
+
+<div class="hearts" id="hearts"></div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar" id="navbar">
+
+<div class="logo">
+D & J
+</div>
+
+<div class="nav-links">
+
+<a href="#home" id="nav-home">Home</a>
+<a href="#couple" id="nav-couple">Couple</a>
+<a href="#location" id="nav-location">Location</a>
+<a href="#gallery" id="nav-gallery">Gallery</a>
+
+<div class="language-switch">
+
+<button onclick="changeLanguage('en')">
+English
+</button>
+
+<button onclick="changeLanguage('ta')">
+தமிழ்
+</button>
+
+</div>
+
+</div>
+
+<div class="menu-btn" id="menu-btn">
+☰
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-overlay"></div>
+<div class="kolam kolam-left"></div>
+<div class="kolam kolam-right"></div>
+
+<div class="floating-ring ring-1"></div>
+<div class="floating-ring ring-2"></div>
+
+<div class="hero-left">
+
+<div class="hero-badge" id="hero-badge">
+✨ Wedding Celebration 2026
+</div>
+
+<h1 class="hero-title" id="hero-title">
+Darnis <span>&</span> Janani
+</h1>
+
+<p class="hero-description" id="hero-desc">
+Together with our families, we joyfully invite you to celebrate the beginning of our forever journey.
+</p>
+
+<div class="premium-countdown">
+
+<div class="count-card">
+<h2 id="days">00</h2>
+<span>Days</span>
+</div>
+
+<div class="count-card">
+<h2 id="hours">00</h2>
+<span>Hours</span>
+</div>
+
+<div class="count-card">
+<h2 id="minutes">00</h2>
+<span>Minutes</span>
+</div>
+
+<div class="count-card">
+<h2 id="seconds">00</h2>
+<span>Seconds</span>
+</div>
+
+</div>
+
+<div class="hero-buttons">
+
+<a href="#location" class="hero-btn primary-btn" id="view-venue-btn">
+View Venue
+</a>
+
+<a href="#gallery" class="hero-btn secondary-btn" id="gallery-btn">
+Explore Gallery
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="image-wrapper">
+
+<img
+src="assets/cpl.jpeg"
+class="main-hero-image"
+alt="Couple">
+
+<div class="floating-date-card">
+
+<span class="mini-text">
+SAVE THE DATE
+</span>
+
+<h3>
+07
+</h3>
+
+<p>
+June 2026
+</p>
+
+</div>
+
+<div class="floating-quote-card" id="hero-quote">
+
+
+“Every love story is beautiful,
+but ours is my favorite.”
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- INVITATION SECTION -->
+
+<section class="section fade-up">
+
+<div class="invitation-container">
+
+<span class="invitation-icon">
+௳
+</span>
+
+<span class="invite-subtitle">
+Wedding Invitation
+</span>
+
+<h2 class="invite-heading">
+We are getting married
+</h2>
+
+<h1 class="couple-name">
+Darnis & Janani
+</h1>
+
+<p class="invite-description">
+
+With the blessings of our elders,
+we cordially invite you and your family
+to grace the auspicious occasion
+of our wedding celebration.
+
+</p>
+
+</div>
+
+</section>
+<!-- COUPLE -->
+
+<section class="section fade-up" id="couple">
+
+<h2 class="section-title">
+Meet The Couple
+</h2>
+
+<div class="couple-grid">
+
+<div class="couple-card">
+
+<img src="assets/Da.png">
+
+<div class="card-content">
+
+<h2>Darnis</h2>
+
+<p>
+Driven by passion, vision, and determination,
+Darnis believes in building a future filled
+with love, happiness, and endless memories.
+His calm nature and caring heart make every
+moment feel safe, warm, and meaningful.</p>
+
+</div>
+
+</div>
+
+<div class="couple-card">
+
+<img src="assets/Ja.png">
+
+<div class="card-content">
+
+<h2>Janani</h2>
+
+<p>
+With elegance, kindness, and a beautiful smile,
+Janani brings joy and positivity wherever she goes.
+Her graceful soul and loving heart create
+a life filled with warmth, laughter,
+and unforgettable moments.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- FAMILY SECTION -->
+
+<section class="section fade-up">
+
+<h2 class="section-title">
+Warmly Inviting
+</h2>
+
+<div class="family-grid">
+
+<div class="family-card">
+
+<h3>
+Darnis Family
+</h3>
+
+<p>
+With hearts full of joy and happiness,  
+we warmly welcome you to celebrate  
+this beautiful beginning with us.
+</p>
+
+</div>
+
+<div class="family-card">
+
+<h3>
+Janani Family
+</h3>
+
+<p>
+With love, blessings, and immense happiness,  
+we invite you to grace the occasion  
+and bless the couple’s new journey.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- OUR STORY -->
+
+<section class="section fade-up" id="story">
+
+<div class="story-container">
+
+<h2 class="section-title">
+Our Story
+</h2>
+
+<p class="story-text">
+
+Two hearts, one beautiful journey.
+What began with a simple meeting
+blossomed into friendship,
+understanding, and a love
+meant to last forever.
+
+</p>
+
+</div>
+
+</section>
+<!-- LOCATION -->
+
+<section class="section fade-up" id="location">
+
+<h2 class="section-title" id="venue-title">
+Wedding Venue
+</h2>
+
+<div class="location-wrapper">
+
+<div class="location-card">
+
+<div class="location-image">
+<img src="assets/invitation.jpg">
+</div>
+
+<div class="location-content">
+
+<h3>
+Chennimalai Gounder Wedding Palace
+</h3>
+
+<p class="venue-address">
+Perundurai, Tamil Nadu
+</p>
+
+<p class="venue-description" id="venue-desc">
+We warmly welcome you to celebrate our wedding ceremony with your presence, blessings, and love.
+</p>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Chennimalai+Gounder+Wedding+Palace+Perundurai"
+target="_blank"
+class="location-btn">
+
+Get Directions
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- WEDDING TIMELINE -->
+
+<section class="section fade-up" id="events">
+
+<h2 class="section-title">
+Wedding Festivities
+</h2>
+
+<div class="timeline">
+
+<!-- EVENT 1 -->
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-card">
+
+<h3 id="reception-title">
+Reception
+</h3>
+
+<p>
+June 06, 2026
+</p>
+
+<p>
+06:30 PM - 08:30 PM
+</p>
+
+<p>
+Chennimalai Gounder Wedding Palace, Perundurai.
+</p>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Perundurai"
+target="_blank"
+class="timeline-btn">
+
+Get Directions
+
+</a>
+
+</div>
+
+</div>
+
+<!-- EVENT 2 -->
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-card">
+
+<h3 id="muhurtham-title">Muhurtham
+</h3>
+
+<p>
+June 07, 2026
+</p>
+
+<p>
+07:30 AM - 08:30 AM
+</p>
+
+<p>
+Chennimalai Gounder Wedding Palace, Perundurai.
+</p>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Perundurai"
+target="_blank"
+class="timeline-btn">
+
+Get Directions
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="section fade-up" id="gallery">
+
+<h2 class="section-title" id="gallery-title">
+Captured Moments
+</h2>
+
+<div class="gallery">
+
+<img src="assets/couple_kissing.jpg">
+<img src="assets/1.jpeg">
+<img src="assets/couple_walking.jpg">
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+
+<footer class="footer">
+
+<h2>
+D & J
+</h2>
+
+<p id="footer-text">
+June 07, 2026 • Perundurai, Tamil Nadu
+</p>
+
+<div class="footer-divider"></div>
+
+<p class="footer-love">
+Crafted with love for a beautiful beginning ✨
+</p>
+
+<p class="footer-brand">
+
+Designed & Developed by
+
+<span>
+BK Creations
+</span>
+
+</p>
+<div class="creator-socials">
+
+<a
+href="https://instagram.com/bk__.creations"
+target="_blank"
+class="creator-btn insta-btn">
+
+Instagram
+
+</a>
+
+<a
+href="https://wa.me/919159954311"
+target="_blank"
+class="creator-btn whatsapp-btn">
+
+WhatsApp
+
+</a>
+
+</div>
+
+</footer>
+
+<!-- MUSIC -->
+
+<div class="music-player" onclick="toggleMusic()">
+🎵
+</div>
+
+<audio id="bgMusic" loop>
+<source src="assets/music.mp3" type="audio/mp3">
+</audio>
+
+<script>
+
+/* NAVBAR */
+
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll',()=>{
+
+if(window.scrollY > 50){
+
+navbar.classList.add('scrolled');
+
+}else{
+
+navbar.classList.remove('scrolled');
+
+}
+
+});
+
+/* MOBILE MENU */
+
+/* MOBILE MENU */
+
+const menuBtn =
+document.getElementById('menu-btn');
+
+const navLinks =
+document.querySelector('.nav-links');
+
+/* TOGGLE MENU */
+
+menuBtn.addEventListener('click', (e) => {
+
+e.stopPropagation();
+
+navLinks.classList.toggle('active');
+
+});
+
+/* CLOSE WHEN CLICKING NAV LINKS */
+
+document.querySelectorAll('.nav-links a')
+.forEach(link => {
+
+link.addEventListener('click', () => {
+
+navLinks.classList.remove('active');
+
+});
+
+});
+
+/* CLOSE WHEN CLICKING OUTSIDE */
+
+document.addEventListener('click', (e) => {
+
+if(
+!navLinks.contains(e.target) &&
+!menuBtn.contains(e.target)
+){
+
+navLinks.classList.remove('active');
+
+}
+
+});
+
+/* CURSOR */
+
+const glow = document.querySelector('.cursor-glow');
+
+document.addEventListener('mousemove',(e)=>{
+
+glow.style.left = e.clientX + 'px';
+glow.style.top = e.clientY + 'px';
+
+});
+
+/* COUNTDOWN */
+
+const targetDate = new Date("June 07, 2026 07:30:00").getTime();
+
+setInterval(()=>{
+
+const now = new Date().getTime();
+
+const diff = targetDate - now;
+
+document.getElementById('days').innerHTML =
+Math.floor(diff / (1000*60*60*24));
+
+document.getElementById('hours').innerHTML =
+Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+
+document.getElementById('minutes').innerHTML =
+Math.floor((diff % (1000*60*60)) / (1000*60));
+
+document.getElementById('seconds').innerHTML =
+Math.floor((diff % (1000*60)) / 1000);
+
+},1000);
+
+/* HEARTS */
+
+const hearts = document.getElementById('hearts');
+
+for(let i=0;i<35;i++){
+
+const heart = document.createElement('div');
+
+heart.classList.add('heart');
+
+heart.innerHTML = '❤';
+
+heart.style.left = Math.random()*100 + 'vw';
+
+heart.style.fontSize = Math.random()*20 + 10 + 'px';
+
+heart.style.animationDuration = Math.random()*10 + 5 + 's';
+
+heart.style.opacity = Math.random();
+
+hearts.appendChild(heart);
+
+}
+
+/* SCROLL ANIMATION */
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('show');
+
+}
+
+});
+
+});
+
+document.querySelectorAll('.fade-up').forEach((el)=>{
+
+observer.observe(el);
+
+});
+
+/* MUSIC */
+
+const music = document.getElementById('bgMusic');
+
+function toggleMusic(){
+
+if(music.paused){
+
+music.play();
+
+}else{
+
+music.pause();
+
+}
+
+
+
+}
+/* =========================================================
+FULL PAGE TRANSLATIONS
+========================================================= */
+
+const translations = {
+
+en: {
+
+navHome:"Home",
+navCouple:"Couple",
+navLocation:"Location",
+navGallery:"Gallery",
+
+heroBadge:"✨ Wedding Celebration 2026",
+
+heroTitle:
+"Darnis <span>&</span> Janani",
+
+heroDesc:
+"Together with our families, we joyfully invite you to celebrate the beginning of our forever journey.",
+
+viewVenue:"View Venue",
+exploreGallery:"Explore Gallery",
+
+saveDate:"SAVE THE DATE",
+
+quote:
+"Every love story is beautiful, but ours is my favorite.",
+
+inviteTitle:"Wedding Invitation",
+
+inviteHeading:"We are getting married",
+
+inviteDesc:
+"With the blessings of our elders, we cordially invite you and your family to grace the auspicious occasion of our wedding celebration.",
+
+meetCouple:"Meet The Couple",
+
+darnisDesc:
+"A man of ambition, kindness, and strength — ready to begin a beautiful journey forever.",
+
+jananiDesc:
+"Graceful, brilliant, and full of warmth — bringing happiness into every moment.",
+
+warmInvite:"Warmly Inviting",
+
+darnisFamily:
+"We are delighted to welcome you to celebrate this beautiful union with your blessings and love.",
+
+jananiFamily:
+"With immense happiness, we invite you to bless the couple as they begin their new journey.",
+
+storyTitle:"Our Story",
+
+storyText:
+"Two hearts, one beautiful journey. What began with a simple meeting blossomed into friendship, understanding, and a love meant to last forever.",
+
+venueTitle:"Wedding Venue",
+
+venueDesc:
+"We warmly welcome you to celebrate our wedding ceremony with your presence, blessings, and love.",
+
+festTitle:"Wedding Festivities",
+
+reception:"Reception",
+
+muhurtham:"Muhurtham",
+
+galleryTitle:"Captured Moments",
+
+footerText:
+"June 07, 2026 • Perundurai, Tamil Nadu"
+
+},
+
+ta: {
+
+navHome:"முகப்பு",
+navCouple:"மணமக்கள்",
+navLocation:"இடம்",
+navGallery:"புகைப்படங்கள்",
+
+heroBadge:"✨ திருமண விழா 2026",
+
+heroTitle:
+"தர்னிஷ் <span>&</span> ஜனனி",
+
+heroDesc:
+"எங்கள் குடும்பத்துடன் இணைந்து, எங்கள் இனிய வாழ்க்கைப் பயணத்தின் தொடக்கத்தை கொண்டாட உங்களை அன்புடன் வரவேற்கிறோம்.",
+
+viewVenue:"நிகழ்வு இடம்",
+exploreGallery:"புகைப்படங்கள்",
+
+saveDate:"தேதியை நினைவில் கொள்ளுங்கள்",
+
+quote:
+"ஒவ்வொரு காதல் கதையும் அழகானது, ஆனால் எங்களுடையது மிகவும் சிறப்பு.",
+
+inviteTitle:"திருமண அழைப்பிதழ்",
+
+inviteHeading:"நாங்கள் திருமணம் செய்கிறோம்",
+
+inviteDesc:
+"எங்கள் பெரியோரின் ஆசீர்வாதத்துடன், எங்கள் திருமண விழாவில் கலந்து கொண்டு எங்களை ஆசீர்வதிக்க உங்களையும் உங்கள் குடும்பத்தினரையும் அன்புடன் வரவேற்கிறோம்.",
+
+meetCouple:"மணமக்களை சந்திக்கவும்",
+
+darnisDesc:
+"ஆசைகள், அன்பு மற்றும் உறுதியால் நிரம்பியவர் — அழகான வாழ்க்கைப் பயணத்தை தொடங்க தயாராக உள்ளார்.",
+
+jananiDesc:
+"அழகு, அறிவு மற்றும் அன்பால் நிறைந்தவர் — ஒவ்வொரு தருணத்தையும் மகிழ்ச்சியாக மாற்றுபவர்.",
+
+warmInvite:"அன்புடன் அழைக்கிறோம்",
+
+darnisFamily:
+"இந்த அழகிய இணைப்பை உங்கள் அன்பும் ஆசீர்வாதங்களும் கொண்டு கொண்டாட வரவேற்கிறோம்.",
+
+jananiFamily:
+"மிகுந்த மகிழ்ச்சியுடன், இந்த புதிய வாழ்க்கைப் பயணத்தை தொடங்கும் மணமக்களை ஆசீர்வதிக்க உங்களை அழைக்கிறோம்.",
+
+storyTitle:"எங்கள் கதை",
+
+storyText:
+"இரண்டு இதயங்கள், ஒரு அழகிய பயணம். ஒரு சாதாரண சந்திப்பில் தொடங்கிய உறவு நட்பாகவும், புரிதலாகவும், என்றும் நிலைக்கும் காதலாகவும் மலர்ந்தது.",
+
+venueTitle:"திருமண நிகழ்வு இடம்",
+
+venueDesc:
+"எங்கள் திருமண விழாவை உங்கள் அன்பும் ஆசீர்வாதங்களும் கொண்டு சிறப்பிக்க அன்புடன் வரவேற்கிறோம்.",
+
+festTitle:"திருமண நிகழ்ச்சிகள்",
+
+reception:"வரவேற்பு",
+
+muhurtham:"முகூர்த்தம்",
+
+galleryTitle:"அழகிய நினைவுகள்",
+
+footerText:
+"ஜூன் 07, 2026 • பெருந்துறை, தமிழ்நாடு"
+
+}
+
+};
+
+function changeLanguage(lang){
+
+document.getElementById("hero-title").innerHTML =
+translations[lang].heroTitle;
+
+document.getElementById("hero-desc").innerHTML =
+translations[lang].heroDesc;
+
+document.getElementById("venue-title").innerHTML =
+translations[lang].venueTitle;
+
+document.getElementById("venue-desc").innerHTML =
+translations[lang].venueDesc;
+
+document.getElementById("gallery-title").innerHTML =
+translations[lang].galleryTitle;
+
+document.getElementById("footer-text").innerHTML =
+translations[lang].footerText;
+
+/* OPTIONAL EXTRA TEXT */
+
+const inviteTitle = document.querySelector('.invite-subtitle');
+if(inviteTitle){
+inviteTitle.innerHTML = translations[lang].inviteTitle;
+}
+
+const inviteHeading = document.querySelector('.invite-heading');
+if(inviteHeading){
+inviteHeading.innerHTML = translations[lang].inviteHeading;
+}
+
+const inviteDesc = document.querySelector('.invite-description');
+if(inviteDesc){
+inviteDesc.innerHTML = translations[lang].inviteDesc;
+}
+
+const meetTitle = document.querySelector('#couple .section-title');
+if(meetTitle){
+meetTitle.innerHTML = translations[lang].meetCouple;
+}
+
+const storyTitle = document.querySelector('#story .section-title');
+if(storyTitle){
+storyTitle.innerHTML = translations[lang].storyTitle;
+}
+
+const storyText = document.querySelector('.story-text');
+if(storyText){
+storyText.innerHTML = translations[lang].storyText;
+}
+
+const festTitle = document.querySelector('#events .section-title');
+if(festTitle){
+festTitle.innerHTML = translations[lang].festTitle;
+}
+
+}
+/* =========================================================
+BK POPUP UPDATED SCRIPT
+========================================================= */
+
+window.addEventListener("DOMContentLoaded", () => {
+
+const popup =
+document.getElementById("bkPopup");
+
+const closeBtn =
+document.getElementById("closePopup");
+
+/* HIDE INITIALLY */
+
+popup.style.display = "none";
+
+/* SHOW AFTER 30 SECONDS */
+
+if(!sessionStorage.getItem("bkPopupShown")){
+
+setTimeout(() => {
+
+popup.style.display = "flex";
+
+popup.classList.remove("hide-popup");
+
+sessionStorage.setItem("bkPopupShown","true");
+
+}, 10000);
+
+}
+
+/* MANUAL CLOSE */
+
+if(closeBtn){
+
+closeBtn.addEventListener("click", () => {
+
+popup.classList.add("hide-popup");
+
+setTimeout(() => {
+
+popup.style.display = "none";
+
+}, 400);
+
+});
+
+}
+
+/* CLICK OUTSIDE TO CLOSE */
+
+if(popup){
+
+popup.addEventListener("click", (e) => {
+
+if(e.target === popup){
+
+popup.classList.add("hide-popup");
+
+setTimeout(() => {
+
+popup.style.display = "none";
+
+}, 400);
+
+}
+
+});
+
+}
+
+});
+
+/* =========================================================
+LOADER
+========================================================= */
+
+window.addEventListener("load",()=>{
+
+const loader =
+document.getElementById("siteLoader");
+
+setTimeout(()=>{
+
+loader.style.opacity = "0";
+
+setTimeout(()=>{
+
+loader.style.display = "none";
+
+},1000);
+
+},580);
+
+});
+
+
+</script>
+
+
+
+</body>
+</html>
