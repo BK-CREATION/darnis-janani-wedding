@@ -969,64 +969,39 @@ letter-spacing:2px;
 /* =========================================================
 CREATOR SOCIAL LINKS
 ========================================================= */
-
-.creator-socials{
-
-display:flex;
-
-justify-content:center;
-
-gap:20px;
-
-margin-top:35px;
-
-flex-wrap:wrap;
+.creator-socials {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.creator-btn{
-
-padding:14px 28px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-font-weight:600;
-
-transition:0.4s;
-
-backdrop-filter:blur(10px);
+.creator-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  color: white;
 }
 
-.insta-btn{
-
-background:linear-gradient(
-135deg,
-#833ab4,
-#fd1d1d,
-#fcb045);
-
-color:white;
-
-box-shadow:
-0 10px 30px rgba(253,29,29,0.25);
+.insta-btn {
+  background: linear-gradient(135deg, #f5852939, #dd2a7b29, #8234af38);
 }
 
-.whatsapp-btn{
-
-background:#25D366;
-
-color:white;
-
-box-shadow:
-0 10px 30px rgba(37,211,102,0.25);
+.whatsapp-btn {
+  background: #25d36520;
 }
 
-.creator-btn:hover{
-
-transform:translateY(-5px) scale(1.05);
+.creator-icon:hover {
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
-
 /* =========================================================
 MUSIC PLAYER
 ========================================================= */
@@ -2452,65 +2427,6 @@ Loading Love Story...
 </div>
 
 </div>
-
-<div class="bk-popup-overlay" id="bkPopup">
-<div class="bk-popup-card">
-<button class="close-popup" id="closePopup">
-×
-</button>
-
-<span class="popup-tag">
-BK CREATIONS
-</span>
-
-<h2>
-Need a Stunning Website?
-</h2>
-
-<p>
-
-We create modern and premium websites
-for businesses, portfolios, startups,
-and personal brands with elegant UI,
-smooth animations, responsive design,
-and high-performance experiences
-that help your brand stand out online ✨
-
-</p>
-
-
-
-<h3>
-Contact now!
-</h3>
-
-<div class="popup-buttons">
-
-<a
-href="https://instagram.com/bk__.creations"
-target="_blank"
-class="popup-btn insta-popup-btn">
-
-Instagram
-
-</a>
-
-<a
-href="https://wa.me/919159954311"
-target="_blank"
-class="popup-btn whatsapp-popup-btn">
-
-WhatsApp
-
-</a>
-
-</div>
-
-
-
-</div>
-
-</div>
 <div class="cursor-glow"></div>
 
 <div class="hearts" id="hearts"></div>
@@ -2980,25 +2896,29 @@ BK Creations
 </span>
 
 </p>
+<!-- Font Awesome CDN -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
 <div class="creator-socials">
 
-<a
-href="https://instagram.com/bk__.creations"
-target="_blank"
-class="creator-btn insta-btn">
+  <a
+    href="https://instagram.com/bk__.creations"
+    target="_blank"
+    class="creator-icon insta-btn"
+  >
+    <i class="fa-brands fa-instagram"></i>
+  </a>
 
-Instagram
-
-</a>
-
-<a
-href="https://wa.me/919159954311"
-target="_blank"
-class="creator-btn whatsapp-btn">
-
-WhatsApp
-
-</a>
+  <a
+    href="https://wa.me/919159954311"
+    target="_blank"
+    class="creator-icon whatsapp-btn"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
 </div>
 
@@ -3390,75 +3310,6 @@ festTitle.innerHTML = translations[lang].festTitle;
 BK POPUP UPDATED SCRIPT
 ========================================================= */
 
-window.addEventListener("DOMContentLoaded", () => {
-
-const popup =
-document.getElementById("bkPopup");
-
-const closeBtn =
-document.getElementById("closePopup");
-
-/* HIDE INITIALLY */
-
-popup.style.display = "none";
-
-/* SHOW AFTER 30 SECONDS */
-
-if(!sessionStorage.getItem("bkPopupShown")){
-
-setTimeout(() => {
-
-popup.style.display = "flex";
-
-popup.classList.remove("hide-popup");
-
-sessionStorage.setItem("bkPopupShown","true");
-
-}, 10000);
-
-}
-
-/* MANUAL CLOSE */
-
-if(closeBtn){
-
-closeBtn.addEventListener("click", () => {
-
-popup.classList.add("hide-popup");
-
-setTimeout(() => {
-
-popup.style.display = "none";
-
-}, 400);
-
-});
-
-}
-
-/* CLICK OUTSIDE TO CLOSE */
-
-if(popup){
-
-popup.addEventListener("click", (e) => {
-
-if(e.target === popup){
-
-popup.classList.add("hide-popup");
-
-setTimeout(() => {
-
-popup.style.display = "none";
-
-}, 400);
-
-}
-
-});
-
-}
-
-});
 
 /* =========================================================
 LOADER
