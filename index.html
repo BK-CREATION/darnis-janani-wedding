@@ -1731,16 +1731,111 @@ z-index:5;
 
 /* MOBILE */
 
+/* =========================================================
+RESPONSIVE POPUP FIX
+========================================================= */
+
 @media(max-width:768px){
+
+.bk-popup-overlay{
+
+padding:15px;
+
+align-items:flex-start;
+
+overflow-y:auto;
+}
 
 .bk-popup-card{
 
-padding:45px 25px;
+width:100%;
+
+max-width:100%;
+
+margin-top:40px;
+
+padding:
+70px 20px 35px;
+
+border-radius:30px;
+
+max-height:90vh;
+
+overflow-y:auto;
 }
+
+/* TITLE */
 
 .bk-popup-card h2{
 
-font-size:2.4rem;
+font-size:2rem;
+
+line-height:1.2;
+
+margin-bottom:20px;
+}
+
+/* DESCRIPTION */
+
+.bk-popup-card p{
+
+font-size:0.92rem;
+
+line-height:1.8;
+}
+
+/* SERVICES */
+
+.popup-services{
+
+grid-template-columns:1fr;
+
+gap:12px;
+}
+
+.popup-service{
+
+padding:15px;
+
+font-size:0.9rem;
+}
+
+/* BUTTONS */
+
+.popup-buttons{
+
+flex-direction:column;
+
+gap:14px;
+}
+
+.popup-btn{
+
+width:100%;
+
+text-align:center;
+}
+
+/* CLOSE BUTTON */
+
+.close-popup{
+
+position:fixed;
+
+top:15px;
+right:15px;
+
+width:42px;
+height:42px;
+
+font-size:1.4rem;
+
+z-index:999999;
+
+background:white;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,0.15);
 }
 
 }
